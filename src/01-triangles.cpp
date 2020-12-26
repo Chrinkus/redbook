@@ -17,6 +17,9 @@ GLuint Buffers[NumBuffers];
 
 const GLuint NumVertices = 6;
 
+const char* vert = "shaders/triangles/triangles.vert";
+const char* frag = "shaders/triangles/triangles.frag";
+
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 // init
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
@@ -36,8 +39,8 @@ void init()
     glNamedBufferStorage(Buffers[ArrayBuffer], sizeof(vertices), vertices, 0);
 
     ShaderInfo shaders[] = {
-        { GL_VERTEX_SHADER, "triangles.vert" },
-        { GL_FRAGMENT_SHADER, "triangles.frag" },
+        { GL_VERTEX_SHADER, vert },
+        { GL_FRAGMENT_SHADER, frag },
         { GL_NONE, NULL }
     };
 
