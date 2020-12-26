@@ -1,3 +1,4 @@
+#include <iostream>
 #include <GLFW/glfw3.h>
 
 int main()
@@ -17,6 +18,8 @@ int main()
 
     // Make the window's context current
     glfwMakeContextCurrent(window);
+
+    std::cout << "OpenGL Version: " << glGetString(GL_VERSION) << '\n';
 
     // Loop until the user closes the window
     while (!glfwWindowShouldClose(window)) {
